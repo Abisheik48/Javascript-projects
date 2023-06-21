@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bmicalculator.css">
+    <script>
+        function user(){
+            let height=document.getElementById("t1").value;
+            let weight=document.getElementById("t2").value;
+            let heightflag=false;
+            let weightflag=false;
+            if(height==" "|| isNaN(height)|| height<=0)
+            {
+                document.getElementById("p1").innerHTML="please provide valid details"
+            }
+            else{
+                heightflag=true;
+                document.getElementById("p1").innerHTML=''
+
+            }
+            if(weight==" " || isNaN(weight)|| weight<=0)
+            {
+                document.getElementById("p2").innerHTML="please provide valid details"
+            }
+            else{
+                weightflag=true;
+                document.getElementById("p2").innerHTML=''
+            }
+        if((heightflag==true)&&(weightflag==true))
+            {
+                const BMI=(weight/((height*height)/10000)).toFixed(2);
+                if(BMI<18.6){
+                    document.getElementById("result").innerHTML='BMI Index :'+BMI+' - Under weight';
+
+                }
+                else if((BMI>=18.6)&&(BMI<24.9)){
+                document.getElementById("result").innerHTML='BMI Index :'+BMI +'  '+' -Normal Weight';
+                }else{
+                document.getElementById("result").innerHTML='BMI Index :'+BMI +'  '+' -Over Weight';
+            }
+        }else{
+            alert('This form has errors');
+            document.getElementById("result").innerHTML=''
+
+        }
+    }
+
+    </script>
+</head>
+<body>
+    
+    <div class="container ">
+        <h3>BMI Calculator</h3>
+        <label for="">Height In cm  </label><input type="text" name="" id="t1"><br>
+        <p id="p1"></p>
+        <label for="">Weight In kg </label><input type="text" name="" id="t2"><br>
+        <p id="p2"></p>
+        <button class="btn" id="b1" onclick="user()">Calculate</button>
+        <p id="result"></p>
+
+    </div>
+    <script src="./Bootstrap/js/jquery.min.js"></script>
+    <script src="./Bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
