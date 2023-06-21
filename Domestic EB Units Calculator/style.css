@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-image: url(./photos/pexels-mohamed-khaled-397998.jpg);
+    background-size: cover;
+}
+.calculator{
+    margin-left: 200px;
+    margin-top: 140px;
+    margin-right: 300px;
+    width: 600px;
+    height: 400px;
+    border:2px solid black;
+    border-radius: 10px;
+    position: absolute;
+    background-color:white;
+    
+}
+h2{
+    margin-top: 20px;
+    margin-left: 40px;
+    padding-left: 40px;
+}  
+h3{
+    position: relative;
+    margin-left: 160px;
+} 
+label{
+    font-size: 17px;
+    margin-top: 30px;
+    margin-left: 90px;
+}
+input{
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 80px;
+    
+}
+p{
+    height: 10px;
+    right: 40px;
+    position: relative;
+    left:320px;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#p2{
+    position: relative;
+    top:50px;
+    left:120px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+button{
+    position: relative;
+    left: 230px;
+    top:30px;
+    margin-left: 80px;
+}
